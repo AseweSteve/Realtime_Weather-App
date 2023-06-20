@@ -10,7 +10,12 @@ html{
     flex-direction: column;
     min-height: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3));
+
+        /* fallback gradient in case JavaScript does not load */
+    
+        /* fallback animation in case JavaScript does not load */
+    animation: gradient 8s ease infinite;
+    background-image: linear-gradient(to bottom,  #B9E49F, #3DA597, #00617A, #003F5F, maroon, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3));
     /* background-image: linear-gradient(to bottom, #ff0000, #0000ff, green); */
 }
 

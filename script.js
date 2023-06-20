@@ -1,5 +1,5 @@
 // function greet(){
-//     alert("Good evening PLP Web devlopers")
+//     alert("Good evening Asewe Creatives")
 // }
 
 let inputValue = document.querySelector(".search-box")
@@ -24,7 +24,33 @@ const displayData = (weather) => {
     description.innerText = `${weather.weather[0].description}`;
 }
 
+// CODE FOR THE SITE BACKGROUND
 
+function setBackgroundImageGradient() {
+  // Setting background gradients according to the time of the day
+
+  if (temp < 10) {
+      // early morning gradient
+      document.querySelector('.app').style.background-image="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
+  } else if (temp < 15) {
+      // morning gradient
+      document.querySelector('.app').style.background-image="linear-gradient(-45deg, #fa4e5e, #f9ab9e, #99b9d0, #00b2d2)";
+  } else if (temp < 20) {
+      // afternoon gradient
+      document.querySelector('.app').style.background-image="linear-gradient(-45deg, #96adcf, #4570b5, #234181, #1b2966)";
+  } else if (temp < 25) {
+      // evening gradient
+      document.querySelector('.app').style.background-image="linear-gradient(-45deg, #fdec6e, #e0943d, #bc361a, #391106)";
+  } else if (temp < 30) {
+      // night gradient
+      document.querySelector('.app').style.background-image="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
+  }
+
+  // animating gradients
+
+  document.querySelector('.app').style.backgroundSize="400% 400%";
+  document.querySelector('.app').style.animation="gradient 8s ease infinite";
+}
 function dateBuilder(d) {
     let months = [
       "January",
